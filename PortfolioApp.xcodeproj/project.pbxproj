@@ -11,15 +11,20 @@
 		FB2D04052CD2E2A500F293F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04042CD2E2A500F293F6 /* ContentView.swift */; };
 		FB2D04072CD2E2A700F293F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2D04062CD2E2A700F293F6 /* Assets.xcassets */; };
 		FB2D040B2CD2E2A700F293F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2D040A2CD2E2A700F293F6 /* Preview Assets.xcassets */; };
+		FB2D04132CD2E99F00F293F6 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04112CD2E99F00F293F6 /* Main.xcdatamodeld */; };
+		FB2D04152CD2F3B700F293F6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04142CD2F3B700F293F6 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB2A83EE2CD6BBF00072F357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FB2D03FF2CD2E2A500F293F6 /* PortfolioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortfolioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2D04022CD2E2A500F293F6 /* PortfolioAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAppApp.swift; sourceTree = "<group>"; };
 		FB2D04042CD2E2A500F293F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB2D04062CD2E2A700F293F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2D04082CD2E2A700F293F6 /* PortfolioApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PortfolioApp.entitlements; sourceTree = "<group>"; };
 		FB2D040A2CD2E2A700F293F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB2D04122CD2E99F00F293F6 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		FB2D04142CD2F3B700F293F6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +57,10 @@
 		FB2D04012CD2E2A500F293F6 /* PortfolioApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB2A83EE2CD6BBF00072F357 /* Info.plist */,
 				FB2D04022CD2E2A500F293F6 /* PortfolioAppApp.swift */,
+				FB2D04112CD2E99F00F293F6 /* Main.xcdatamodeld */,
+				FB2D04142CD2F3B700F293F6 /* DataController.swift */,
 				FB2D04042CD2E2A500F293F6 /* ContentView.swift */,
 				FB2D04062CD2E2A700F293F6 /* Assets.xcassets */,
 				FB2D04082CD2E2A700F293F6 /* PortfolioApp.entitlements */,
@@ -139,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2D04132CD2E99F00F293F6 /* Main.xcdatamodeld in Sources */,
+				FB2D04152CD2F3B700F293F6 /* DataController.swift in Sources */,
 				FB2D04052CD2E2A500F293F6 /* ContentView.swift in Sources */,
 				FB2D04032CD2E2A500F293F6 /* PortfolioAppApp.swift in Sources */,
 			);
@@ -274,6 +284,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PortfolioApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -312,6 +323,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PortfolioApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -359,6 +371,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FB2D04112CD2E99F00F293F6 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FB2D04122CD2E99F00F293F6 /* Main.xcdatamodel */,
+			);
+			currentVersion = FB2D04122CD2E99F00F293F6 /* Main.xcdatamodel */;
+			name = Main.xcdatamodeld;
+			path = "/Users/ozanozcelik/Desktop/GENC/swift-usefull-samples/PortfolioApp/PortfolioApp/Main.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FB2D03F72CD2E2A500F293F6 /* Project object */;
 }
