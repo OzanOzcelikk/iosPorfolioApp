@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2A83F02CD6C65C0072F357 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2A83EF2CD6C65C0072F357 /* SidebarView.swift */; };
+		FB2A83F22CD6C6740072F357 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2A83F12CD6C6740072F357 /* DetailView.swift */; };
 		FB2D04032CD2E2A500F293F6 /* PortfolioAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04022CD2E2A500F293F6 /* PortfolioAppApp.swift */; };
 		FB2D04052CD2E2A500F293F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04042CD2E2A500F293F6 /* ContentView.swift */; };
 		FB2D04072CD2E2A700F293F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2D04062CD2E2A700F293F6 /* Assets.xcassets */; };
 		FB2D040B2CD2E2A700F293F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2D040A2CD2E2A700F293F6 /* Preview Assets.xcassets */; };
 		FB2D04132CD2E99F00F293F6 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04112CD2E99F00F293F6 /* Main.xcdatamodeld */; };
 		FB2D04152CD2F3B700F293F6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04142CD2F3B700F293F6 /* DataController.swift */; };
+		FBF809B12CD78B9E00288C83 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF809B02CD78B9E00288C83 /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB2A83EE2CD6BBF00072F357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FB2A83EF2CD6C65C0072F357 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		FB2A83F12CD6C6740072F357 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FB2D03FF2CD2E2A500F293F6 /* PortfolioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortfolioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2D04022CD2E2A500F293F6 /* PortfolioAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAppApp.swift; sourceTree = "<group>"; };
 		FB2D04042CD2E2A500F293F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,6 +30,7 @@
 		FB2D040A2CD2E2A700F293F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB2D04122CD2E99F00F293F6 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		FB2D04142CD2F3B700F293F6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		FBF809B02CD78B9E00288C83 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				FB2A83EE2CD6BBF00072F357 /* Info.plist */,
+				FB2A83EF2CD6C65C0072F357 /* SidebarView.swift */,
 				FB2D04022CD2E2A500F293F6 /* PortfolioAppApp.swift */,
 				FB2D04112CD2E99F00F293F6 /* Main.xcdatamodeld */,
 				FB2D04142CD2F3B700F293F6 /* DataController.swift */,
@@ -65,6 +72,8 @@
 				FB2D04062CD2E2A700F293F6 /* Assets.xcassets */,
 				FB2D04082CD2E2A700F293F6 /* PortfolioApp.entitlements */,
 				FB2D04092CD2E2A700F293F6 /* Preview Content */,
+				FB2A83F12CD6C6740072F357 /* DetailView.swift */,
+				FBF809B02CD78B9E00288C83 /* Filter.swift */,
 			);
 			path = PortfolioApp;
 			sourceTree = "<group>";
@@ -147,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF809B12CD78B9E00288C83 /* Filter.swift in Sources */,
 				FB2D04132CD2E99F00F293F6 /* Main.xcdatamodeld in Sources */,
+				FB2A83F22CD6C6740072F357 /* DetailView.swift in Sources */,
 				FB2D04152CD2F3B700F293F6 /* DataController.swift in Sources */,
+				FB2A83F02CD6C65C0072F357 /* SidebarView.swift in Sources */,
 				FB2D04052CD2E2A500F293F6 /* ContentView.swift in Sources */,
 				FB2D04032CD2E2A500F293F6 /* PortfolioAppApp.swift in Sources */,
 			);
@@ -295,7 +307,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -334,7 +346,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
