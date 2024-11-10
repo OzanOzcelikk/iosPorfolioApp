@@ -12,6 +12,9 @@ class DataController: ObservableObject {
     let container: NSPersistentCloudKitContainer
     
     @Published var selectedFilter: Filter? = Filter.all
+    @Published var selectedIssue: Issue?
+    
+    private var saveTask: Task<Void, Error>?
     
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
@@ -73,6 +76,15 @@ class DataController: ObservableObject {
             try? container.viewContext.save()
         }
     }
+    
+    func queueSave(){
+        saveTask?.cancel()
+        
+        saveTask = Task{ @MainActor in
+            try await Task.sleep(for: .seconds(3))
+            save()
+        }
+    }
         
     func delete(_ object: NSManagedObject){
         objectWillChange.send()
@@ -101,4 +113,17 @@ class DataController: ObservableObject {
             
             save()
         }
+    
+    
+    func missingTags(from issue: Issue) -> [Tag] {
+        let request = Tag.fetchRequest() 
+        let allTags = (try? container.viewContext.fetch(request)) ?? []
+        
+        let allTagsSet = Set(allTags)
+        let difference = allTagsSet.symmetricDifference(issue.issueTags)
+        
+        return difference.sorted()
+    }
+        
+
 }
