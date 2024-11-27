@@ -13,8 +13,8 @@
 		FB2D04052CD2E2A500F293F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04042CD2E2A500F293F6 /* ContentView.swift */; };
 		FB2D04072CD2E2A700F293F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2D04062CD2E2A700F293F6 /* Assets.xcassets */; };
 		FB2D040B2CD2E2A700F293F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2D040A2CD2E2A700F293F6 /* Preview Assets.xcassets */; };
-		FB2D04132CD2E99F00F293F6 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04112CD2E99F00F293F6 /* Main.xcdatamodeld */; };
-		FB2D04152CD2F3B700F293F6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2D04142CD2F3B700F293F6 /* DataController.swift */; };
+		FB3CE90D2CF79CDD00ED9125 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3CE90C2CF79CD700ED9125 /* DataController.swift */; };
+		FB4E08972CF7733900CED009 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB4E08952CF7733900CED009 /* Main.xcdatamodeld */; };
 		FBC676562CD935CA00449D6A /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC676552CD935CA00449D6A /* IssueView.swift */; };
 		FBC676582CD935DD00449D6A /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC676572CD935DD00449D6A /* NoIssueView.swift */; };
 		FBE0BC192CD82384007D4C92 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0BC182CD82384007D4C92 /* IssueRow.swift */; };
@@ -33,8 +33,8 @@
 		FB2D04062CD2E2A700F293F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2D04082CD2E2A700F293F6 /* PortfolioApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PortfolioApp.entitlements; sourceTree = "<group>"; };
 		FB2D040A2CD2E2A700F293F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB2D04122CD2E99F00F293F6 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
-		FB2D04142CD2F3B700F293F6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		FB3CE90C2CF79CD700ED9125 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		FB4E08962CF7733900CED009 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		FBC676552CD935CA00449D6A /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		FBC676572CD935DD00449D6A /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
 		FBE0BC182CD82384007D4C92 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
@@ -73,11 +73,10 @@
 		FB2D04012CD2E2A500F293F6 /* PortfolioApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB3CE90C2CF79CD700ED9125 /* DataController.swift */,
 				FB2A83EE2CD6BBF00072F357 /* Info.plist */,
 				FB2A83EF2CD6C65C0072F357 /* SidebarView.swift */,
 				FB2D04022CD2E2A500F293F6 /* PortfolioAppApp.swift */,
-				FB2D04112CD2E99F00F293F6 /* Main.xcdatamodeld */,
-				FB2D04142CD2F3B700F293F6 /* DataController.swift */,
 				FB2D04042CD2E2A500F293F6 /* ContentView.swift */,
 				FB2D04062CD2E2A700F293F6 /* Assets.xcassets */,
 				FB2D04082CD2E2A700F293F6 /* PortfolioApp.entitlements */,
@@ -89,6 +88,7 @@
 				FBE0BC182CD82384007D4C92 /* IssueRow.swift */,
 				FBC676552CD935CA00449D6A /* IssueView.swift */,
 				FBC676572CD935DD00449D6A /* NoIssueView.swift */,
+				FB4E08952CF7733900CED009 /* Main.xcdatamodeld */,
 			);
 			path = PortfolioApp;
 			sourceTree = "<group>";
@@ -172,12 +172,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBF809B12CD78B9E00288C83 /* Filter.swift in Sources */,
-				FB2D04132CD2E99F00F293F6 /* Main.xcdatamodeld in Sources */,
+				FB3CE90D2CF79CDD00ED9125 /* DataController.swift in Sources */,
 				FBF809B32CD79C1700288C83 /* Issue-CoreDataHelpers.swift in Sources */,
 				FB2A83F22CD6C6740072F357 /* DetailView.swift in Sources */,
-				FB2D04152CD2F3B700F293F6 /* DataController.swift in Sources */,
 				FBF809B52CD79F6900288C83 /* Tag-CoreDataGelpers.swift in Sources */,
 				FB2A83F02CD6C65C0072F357 /* SidebarView.swift in Sources */,
+				FB4E08972CF7733900CED009 /* Main.xcdatamodeld in Sources */,
 				FB2D04052CD2E2A500F293F6 /* ContentView.swift in Sources */,
 				FBC676562CD935CA00449D6A /* IssueView.swift in Sources */,
 				FBC676582CD935DD00449D6A /* NoIssueView.swift in Sources */,
@@ -405,14 +405,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FB2D04112CD2E99F00F293F6 /* Main.xcdatamodeld */ = {
+		FB4E08952CF7733900CED009 /* Main.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FB2D04122CD2E99F00F293F6 /* Main.xcdatamodel */,
+				FB4E08962CF7733900CED009 /* Main.xcdatamodel */,
 			);
-			currentVersion = FB2D04122CD2E99F00F293F6 /* Main.xcdatamodel */;
-			name = Main.xcdatamodeld;
-			path = "/Users/ozanozcelik/Desktop/GENC/swift-usefull-samples/PortfolioApp/PortfolioApp/Main.xcdatamodeld";
+			currentVersion = FB4E08962CF7733900CED009 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

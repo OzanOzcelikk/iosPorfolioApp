@@ -116,7 +116,7 @@ class DataController: ObservableObject {
     
     
     func missingTags(from issue: Issue) -> [Tag] {
-        let request = Tag.fetchRequest() 
+        let request = Tag.fetchRequest()
         let allTags = (try? container.viewContext.fetch(request)) ?? []
         
         let allTagsSet = Set(allTags)
@@ -127,3 +127,4 @@ class DataController: ObservableObject {
         
 
 }
+
