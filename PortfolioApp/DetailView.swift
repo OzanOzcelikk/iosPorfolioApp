@@ -19,7 +19,9 @@ struct DetailView: View {
             }
         }
         .navigationTitle("Issue Details")
+        #if !os(macOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
                 
     }
 }
