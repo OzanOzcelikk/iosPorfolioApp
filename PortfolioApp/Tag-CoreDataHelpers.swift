@@ -1,8 +1,8 @@
 //
-//  Tag-CoreDataGelpers.swift
+//  Tag-CoreDataHelpers.swift
 //  PortfolioApp
 //
-//  Created by Ozan Ozcelik on 3.11.2024.
+//  Created by Ozan Özçelik on 3.11.2024.
 //
 
 import Foundation
@@ -23,7 +23,7 @@ extension Tag {
     }
     
     static var example: Tag {
-        let controller = DataController(inMemory: true)
+        let controller = DataController(inMemory: false)
         let viewContext = controller.container.viewContext
         
         let tag = Tag(context: viewContext)

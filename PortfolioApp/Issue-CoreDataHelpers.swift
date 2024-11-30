@@ -42,7 +42,7 @@ extension Issue {
     }
     
     static var example: Issue {
-        let controller = DataController(inMemory: true)
+        let controller = DataController(inMemory: false)
         let viewContext = controller.container.viewContext
         
         let issue = Issue(context: viewContext)

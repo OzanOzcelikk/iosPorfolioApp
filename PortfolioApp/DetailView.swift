@@ -18,6 +18,7 @@ struct DetailView: View {
                 NoIssueView()
             }
         }
+        .padding()
         .navigationTitle("Issue Details")
         #if !os(macOS)
         .navigationBarTitleDisplayMode(.inline)
