@@ -22,6 +22,12 @@
 		FB81BF622CFBAEA8006D5C49 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB81BF602CFBAEA8006D5C49 /* Colors.xcassets */; };
 		FB81BF642CFBB008006D5C49 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB81BF632CFBB008006D5C49 /* Award.swift */; };
 		FB81BF662CFBB114006D5C49 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB81BF652CFBB114006D5C49 /* AwardsView.swift */; };
+		FBAB8AB82D01C657003E2E4E /* SidebarViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAB8AB72D01C657003E2E4E /* SidebarViewToolbar.swift */; };
+		FBAB8ABA2D01CB2A003E2E4E /* IssueViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAB8AB92D01CB2A003E2E4E /* IssueViewToolbar.swift */; };
+		FBAB8ABC2D01E127003E2E4E /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAB8ABB2D01E126003E2E4E /* ContentViewToolbar.swift */; };
+		FBAB8ABE2D01E2D1003E2E4E /* TagsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAB8ABD2D01E2D1003E2E4E /* TagsMenuView.swift */; };
+		FBAB8AC02D01E526003E2E4E /* SmartFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAB8ABF2D01E526003E2E4E /* SmartFilterRow.swift */; };
+		FBAB8AC22D01E5E1003E2E4E /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAB8AC12D01E5E1003E2E4E /* UserFilterRow.swift */; };
 		FBC676562CD935CA00449D6A /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC676552CD935CA00449D6A /* IssueView.swift */; };
 		FBC676582CD935DD00449D6A /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC676572CD935DD00449D6A /* NoIssueView.swift */; };
 		FBE0BC192CD82384007D4C92 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0BC182CD82384007D4C92 /* IssueRow.swift */; };
@@ -51,6 +57,12 @@
 		FB81BF602CFBAEA8006D5C49 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		FB81BF632CFBB008006D5C49 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		FB81BF652CFBB114006D5C49 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		FBAB8AB72D01C657003E2E4E /* SidebarViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewToolbar.swift; sourceTree = "<group>"; };
+		FBAB8AB92D01CB2A003E2E4E /* IssueViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewToolbar.swift; sourceTree = "<group>"; };
+		FBAB8ABB2D01E126003E2E4E /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
+		FBAB8ABD2D01E2D1003E2E4E /* TagsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsMenuView.swift; sourceTree = "<group>"; };
+		FBAB8ABF2D01E526003E2E4E /* SmartFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFilterRow.swift; sourceTree = "<group>"; };
+		FBAB8AC12D01E5E1003E2E4E /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 		FBC676552CD935CA00449D6A /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		FBC676572CD935DD00449D6A /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
 		FBE0BC182CD82384007D4C92 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
@@ -93,8 +105,12 @@
 				FB3CE90C2CF79CD700ED9125 /* DataController.swift */,
 				FB2A83EE2CD6BBF00072F357 /* Info.plist */,
 				FB2A83EF2CD6C65C0072F357 /* SidebarView.swift */,
+				FBAB8AC12D01E5E1003E2E4E /* UserFilterRow.swift */,
+				FBAB8ABF2D01E526003E2E4E /* SmartFilterRow.swift */,
+				FBAB8AB72D01C657003E2E4E /* SidebarViewToolbar.swift */,
 				FB2D04022CD2E2A500F293F6 /* PortfolioAppApp.swift */,
 				FB2D04042CD2E2A500F293F6 /* ContentView.swift */,
+				FBAB8ABB2D01E126003E2E4E /* ContentViewToolbar.swift */,
 				FB2D04062CD2E2A700F293F6 /* Assets.xcassets */,
 				FB2D04082CD2E2A700F293F6 /* PortfolioApp.entitlements */,
 				FB2A83F12CD6C6740072F357 /* DetailView.swift */,
@@ -102,6 +118,8 @@
 				FBF809B22CD79C1700288C83 /* Issue-CoreDataHelpers.swift */,
 				FBE0BC182CD82384007D4C92 /* IssueRow.swift */,
 				FBC676552CD935CA00449D6A /* IssueView.swift */,
+				FBAB8ABD2D01E2D1003E2E4E /* TagsMenuView.swift */,
+				FBAB8AB92D01CB2A003E2E4E /* IssueViewToolbar.swift */,
 				FBC676572CD935DD00449D6A /* NoIssueView.swift */,
 				FB6A522E2CFF205B000113B7 /* Awards.json */,
 				FB81BF602CFBAEA8006D5C49 /* Colors.xcassets */,
@@ -189,7 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBF809B12CD78B9E00288C83 /* Filter.swift in Sources */,
+				FBAB8ABE2D01E2D1003E2E4E /* TagsMenuView.swift in Sources */,
 				FB81BF642CFBB008006D5C49 /* Award.swift in Sources */,
+				FBAB8ABA2D01CB2A003E2E4E /* IssueViewToolbar.swift in Sources */,
+				FBAB8AC02D01E526003E2E4E /* SmartFilterRow.swift in Sources */,
 				FB81BF662CFBB114006D5C49 /* AwardsView.swift in Sources */,
 				FB3CE90D2CF79CDD00ED9125 /* DataController.swift in Sources */,
 				FBF809B32CD79C1700288C83 /* Issue-CoreDataHelpers.swift in Sources */,
@@ -197,9 +218,12 @@
 				FB81BF5E2CFB9F89006D5C49 /* Bundle-Decodable.swift in Sources */,
 				FB2A83F02CD6C65C0072F357 /* SidebarView.swift in Sources */,
 				FB4E08972CF7733900CED009 /* Main.xcdatamodeld in Sources */,
+				FBAB8ABC2D01E127003E2E4E /* ContentViewToolbar.swift in Sources */,
 				FB2D04052CD2E2A500F293F6 /* ContentView.swift in Sources */,
 				FB81BF5C2CFB9E69006D5C49 /* Tag-CoreDataHelpers.swift in Sources */,
+				FBAB8AB82D01C657003E2E4E /* SidebarViewToolbar.swift in Sources */,
 				FBC676562CD935CA00449D6A /* IssueView.swift in Sources */,
+				FBAB8AC22D01E5E1003E2E4E /* UserFilterRow.swift in Sources */,
 				FBC676582CD935DD00449D6A /* NoIssueView.swift in Sources */,
 				FBE0BC192CD82384007D4C92 /* IssueRow.swift in Sources */,
 				FB2D04032CD2E2A500F293F6 /* PortfolioAppApp.swift in Sources */,
