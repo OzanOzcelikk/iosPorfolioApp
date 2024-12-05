@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     @EnvironmentObject var dataController: DataController
-    
+
     var body: some View {
         VStack {
             if let issue = dataController.selectedIssue {
@@ -23,7 +23,7 @@ struct DetailView: View {
         #if !os(macOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
-                
+
     }
 }
 

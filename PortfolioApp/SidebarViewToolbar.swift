@@ -10,21 +10,21 @@ import SwiftUI
 struct SidebarViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     @State var showingAwards: Bool = false
-    
+
     var body: some View {
         Button {
             dataController.deleteAll()
         } label: {
             Label("Delete All", systemImage: "trash")
         }
-        
-        Button{
+
+        Button {
             showingAwards.toggle()
         } label: {
             Label("Show awards", systemImage: "rosette")
         }
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
-        
+
         #if DEBUG
         Button {
             dataController.deleteAll()
@@ -33,8 +33,8 @@ struct SidebarViewToolbar: View {
             Label("Add Sample Data", systemImage: "plus")
         }
         #endif
-        
-        Button(action: dataController.newTag){
+
+        Button(action: dataController.newTag) {
             Label("New Tag", systemImage: "plus")
         }
     }

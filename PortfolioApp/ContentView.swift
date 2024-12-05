@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     @EnvironmentObject var dataController: DataController
-    
 
     var body: some View {
         List(selection: $dataController.selectedIssue) {
@@ -20,15 +19,15 @@ struct ContentView: View {
             .onDelete(perform: delete)
         }
         .navigationTitle("Issues")
-        .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Filter issues"){ tag in
+        .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Filter issues") { tag in
             Text(tag.tagName)
         }
         .toolbar(content: ContentViewToolbar.init)
     }
-    
+
     func delete(_ offsets: IndexSet) {
         let issues = dataController.issuesForSelectedFilter()
-        
+
         for offset in offsets {
             let item = issues[offset]
             dataController.delete(item)

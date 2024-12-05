@@ -9,13 +9,13 @@ import SwiftUI
 
 @main
 struct PortfolioAppApp: App {
-    
+
     @StateObject var dataController = DataController()
     @Environment(\.scenePhase) var scenePhase
-    
+
     var body: some Scene {
         WindowGroup {
-            NavigationSplitView{
+            NavigationSplitView {
                 SidebarView()
             } content: {
                 ContentView()
@@ -25,10 +25,10 @@ struct PortfolioAppApp: App {
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
             .onChange(of: scenePhase) { newPhase in
-                if newPhase != .active  {
+                if newPhase != .active {
                     dataController.save()
                 }
-            }       
+            }
         }
     }
 }

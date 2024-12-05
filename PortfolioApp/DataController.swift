@@ -31,7 +31,7 @@ class DataController: ObservableObject {
     @Published var filterStatus = Status.all
     @Published var sortType = SortType.creationDate
     @Published var sortNewestFirst = true
-    
+
     private var saveTask: Task<Void, Error>?
 
     static var preview: DataController = {
@@ -68,7 +68,7 @@ class DataController: ObservableObject {
         container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
         NotificationCenter.default.addObserver(forName: .NSPersistentStoreRemoteChange, object: container.persistentStoreCoordinator, queue: .main, using: remoteStoreChanged)
 
-        container.loadPersistentStores { storeDescription, error in
+        container.loadPersistentStores { _, error in
             if let error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
@@ -82,14 +82,14 @@ class DataController: ObservableObject {
     func createSampleData() {
         let viewContext = container.viewContext
 
-        for i in 1...5 {
+        for tagCounter in 1...5 {
             let tag = Tag(context: viewContext)
             tag.id = UUID()
-            tag.name = "Tag \(i)"
+            tag.name = "Tag \(tagCounter)"
 
-            for j in 1...10 {
+            for issueCounter in 1...10 {
                 let issue = Issue(context: viewContext)
-                issue.title = "Issue \(i)-\(j)"
+                issue.title = "Issue \(tagCounter)-\(issueCounter)"
                 issue.content = "Description goes here"
                 issue.creationDate = .now
                 issue.completed = Bool.random()
@@ -103,7 +103,7 @@ class DataController: ObservableObject {
 
     func save() {
         saveTask?.cancel()
-        
+
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
         }
@@ -181,17 +181,17 @@ class DataController: ObservableObject {
                 predicates.append(tokenPredicate)
             }
         }
-        
-        if filterEnabled{
+
+        if filterEnabled {
             if filterPriority >= 0 {
                 let priorityPredicate = NSPredicate(format: "priority = %d", filterPriority)
                 predicates.append(priorityPredicate)
             }
-            
+
             if filterStatus != .all {
                 let lookForClosed = filterStatus == .closed
                 let statusFilter = NSPredicate(format: "completed =@", NSNumber(value: lookForClosed))
-                
+
                 predicates.append(statusFilter)
             }
         }
@@ -202,38 +202,38 @@ class DataController: ObservableObject {
         let allIssues = (try? container.viewContext.fetch(request)) ?? []
         return allIssues
     }
-    
+
     func newTag() {
-        
+
         let tag = Tag(context: container.viewContext)
-        
+
         tag.id = UUID()
         tag.name = NSLocalizedString("New Tag", comment: "Create a new tag")
-        
+
         save()
     }
-    
+
     func newIssue() {
-        
+
         let issue = Issue(context: container.viewContext)
-        
+
         issue.title = NSLocalizedString("New Issue", comment: "Create a new Issue")
         issue.creationDate = Date.now
         issue.priority = 1
-        
-        if let tag = selectedFilter?.tag{
+
+        if let tag = selectedFilter?.tag {
             issue.addToTags(tag)
         }
-        
+
         save()
-        
+
         selectedIssue = issue
     }
-    
+
     func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
         (try? container.viewContext.count(for: fetchRequest)) ?? 0
     }
-    
+
     func hasEarned(award: Award) -> Bool {
         switch award.criterion {
         case "issues":
@@ -263,4 +263,3 @@ class DataController: ObservableObject {
     }
 
 }
-
