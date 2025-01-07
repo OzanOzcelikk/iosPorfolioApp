@@ -1,0 +1,10 @@
+# Workspace file
+*.xcworkspace
+.DS_Store
+
+# Build artifacts
+DerivedData/
+build/
+
+# User-specific files
+xcuserdata/
